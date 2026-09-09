@@ -1,0 +1,328 @@
+#desktop-screen {
+    position: relative;
+    background: #111;
+}
+
+.desktop-wallpaper {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px),
+        #111;
+    background-size: 32px 32px;
+}
+
+.case001-wallpaper {
+    background:
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px),
+        #151515;
+    background-size: 28px 28px;
+}
+
+.desktop-status {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    z-index: 5;
+    font-size: 11px;
+    color: #777;
+}
+
+.desktop-grid {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(3, 90px);
+    grid-auto-rows: 90px;
+    gap: 8px;
+    padding: 35px 20px;
+}
+
+.desktop-icon {
+    width: 82px;
+    height: 82px;
+    text-align: center;
+    padding: 7px;
+    cursor: pointer;
+}
+
+.desktop-icon:hover {
+    background: rgba(255,255,255,0.05);
+}
+
+.icon-svg {
+    font-size: 30px;
+    height: 42px;
+}
+
+.icon-label {
+    font-size: 10px;
+    color: #bbb;
+}
+
+#taskbar {
+    position: absolute;
+    z-index: 2000;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 36px;
+    display: flex;
+    background: #0b0b0b;
+    border-top: 1px solid #444;
+}
+
+.taskbar-btn,
+.taskbar-item,
+.tray-item {
+    border-right: 1px solid #333;
+    padding: 9px 12px;
+    font-size: 11px;
+}
+
+.taskbar-btn {
+    width: 90px;
+}
+
+.taskbar-apps-container {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+}
+
+.taskbar-item {
+    max-width: 180px;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.taskbar-item.active {
+    background: #222;
+}
+
+#system-tray {
+    display: flex;
+}
+
+.app-section {
+    padding: 15px;
+}
+
+.app-title {
+    border-bottom: 1px solid #444;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+}
+
+.case-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    border-bottom: 1px solid #333;
+    padding: 14px 5px;
+}
+
+.case-desc {
+    margin-top: 8px;
+    color: #777;
+    font-size: 11px;
+    max-width: 470px;
+}
+
+.case-status {
+    display: block;
+    color: #aaa;
+    font-size: 10px;
+    margin-bottom: 8px;
+    text-align: right;
+}
+
+.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.file-row {
+    display: flex;
+    gap: 12px;
+    padding: 11px;
+    border-bottom: 1px solid #292929;
+    cursor: pointer;
+}
+
+.file-row:hover {
+    background: #1d1d1d;
+}
+
+.photo-list {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.photo-card {
+    width: 190px;
+    border: 1px solid #333;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.photo-placeholder {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0b0b0b;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.audio-card,
+.message {
+    border-bottom: 1px solid #333;
+    padding: 12px 5px;
+}
+
+.audio-card audio {
+    width: 100%;
+    margin-top: 12px;
+}
+
+.message-head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+
+.browser-page {
+    padding: 15px;
+}
+
+.terminal-app {
+    height: 100%;
+    background: #050505;
+    color: #bdbdbd;
+    padding: 10px;
+}
+
+.terminal-output {
+    height: calc(100% - 35px);
+    overflow-y: auto;
+    font-size: 12px;
+}
+
+.terminal-line {
+    display: flex;
+    gap: 8px;
+}
+
+.terminal-line input {
+    flex: 1;
+    background: transparent;
+    border: 0;
+    outline: none;
+    color: #ddd;
+}
+
+.terminal-secret {
+    color: #eee;
+}
+
+.hex-block,
+.decode-result {
+    background: #0b0b0b;
+    border: 1px solid #333;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.notes-app {
+    padding: 15px;
+}
+
+.notes-app textarea {
+    width: 100%;
+    height: 300px;
+    margin: 12px 0;
+    background: #0b0b0b;
+    color: #ddd;
+    border: 1px solid #444;
+    padding: 10px;
+    resize: none;
+}
+
+.evidence-viewer {
+    padding: 15px;
+}
+
+.evidence-image {
+    display: block;
+    max-width: 100%;
+    max-height: 340px;
+    margin: 0 auto 15px;
+    border: 1px solid #444;
+}
+
+.conclusion-app {
+    padding: 18px;
+    line-height: 1.8;
+}
+
+.conclusion-app hr {
+    border: 0;
+    border-top: 1px solid #333;
+    margin: 18px 0;
+}
+
+.floating-conclusion {
+    position: absolute;
+    z-index: 1500;
+    right: 18px;
+    bottom: 50px;
+    background: #111;
+    color: #ddd;
+    border: 1px solid #777;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+
+/* BACKGROUND AUDIO CONTROL */
+.audio-control {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    height: 34px;
+    padding: 0 8px;
+    border-left: 1px solid #333;
+    color: #aaa;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+.audio-label {
+    color: #777;
+}
+
+#background-volume {
+    width: 80px;
+    height: 12px;
+    cursor: pointer;
+}
+
+.audio-mute {
+    background: #111;
+    color: #aaa;
+    border: 1px solid #555;
+    padding: 3px 6px;
+    font-size: 8px;
+    cursor: pointer;
+}
+
+.audio-mute:hover {
+    background: #222;
+    color: #ddd;
+}

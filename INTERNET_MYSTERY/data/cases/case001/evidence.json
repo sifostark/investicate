@@ -1,0 +1,101 @@
+[
+  {
+    "id": "EV-01",
+    "app": "documents",
+    "title": "statements.txt",
+    "type": "document",
+    "content": "SECURITY STATEMENT\n\nAlex Mercer signed out of the office at 02:40 AM.\n\nThe handwritten sheet contains no later entry for Alex."
+  },
+  {
+    "id": "EV-02",
+    "app": "documents",
+    "title": "System_Access.log",
+    "type": "document",
+    "content": "[00:48:11] nvale AUTHENTICATED MAIN_DESK\n[01:15:22] dcross AUTHENTICATED BASEMENT_B2\n[02:40:07] amercer SIGNED_OUT ARCHIVE_OFFICE\n[02:54:10] nvale LOGGED_OUT MAIN_DESK\n\nNo normal workstation record explains the 03:17 event."
+  },
+  {
+    "id": "EV-03",
+    "app": "trash",
+    "title": "corrupted_data.tmp",
+    "type": "hex",
+    "content": "63 61 74 20 2e 73 79 73 5f 6e 65 74 77 6f 72 6b 2e 6c 6f 67",
+    "note": "A damaged temporary buffer. The data is written as pairs of hexadecimal characters. Look for the archive training material in BROWSER to learn how this kind of data can be interpreted."
+  },
+  {
+    "id": "EV-04",
+    "app": "photos",
+    "title": "office_0317.jpg",
+    "type": "image",
+    "src": "/static/apps/cases/case001/assets/images/desktop.png",
+    "caption": "Archive office photograph. A wall clock is visible."
+  },
+  {
+    "id": "EV-05",
+    "app": "photos",
+    "title": "basement_blueprint.jpg",
+    "type": "image",
+    "src": "/static/apps/cases/case001/assets/images/Blueprint.png",
+    "caption": "Basement layout showing BASEMENT B2, MAINTENANCE AREA and VAULT B3."
+  },
+  {
+    "id": "EV-06",
+    "app": "audio",
+    "title": "REC_14-10-18_03.wav",
+    "type": "audio",
+    "src": "/static/apps/cases/case001/assets/audio/REC_14-10-18_03.wav",
+    "recorded_time": "02:51",
+    "caption": "Recovered recording from the archive office. The background contains a deliberately subtle repeating signal."
+  },
+  {
+    "id": "EV-07",
+    "app": "messages",
+    "title": "Night Shift Thread",
+    "type": "messages",
+    "messages": [
+      {
+        "from": "Nora Vale",
+        "time": "02:56",
+        "text": "I am leaving the main desk. The audit queue is still open."
+      },
+      {
+        "from": "Daniel Cross",
+        "time": "03:03",
+        "text": "Still in B2. The maintenance corridor is quiet."
+      },
+      {
+        "from": "Alex Mercer",
+        "time": "03:05",
+        "text": "Archive is closed for the night."
+      }
+    ]
+  },
+  {
+    "id": "EV-08",
+    "app": "documents",
+    "title": "maintenance_report.txt",
+    "type": "document",
+    "content": "NIGHT MAINTENANCE REPORT\n\n01:15 - Daniel Cross entered BASEMENT B2.\n03:03 - Daniel reported remaining in B2.\nNo maintenance task was scheduled for VAULT B3.\n\nThe B2 maintenance route does not itself establish access to Vault Node B3."
+  },
+  {
+    "id": "EV-09",
+    "app": "terminal",
+    "title": ".sys_network.log",
+    "type": "hidden_terminal",
+    "hidden": true,
+    "content": "[01:15:22] USER: dcross LOGGED IN BASEMENT_B2\n[02:54:10] USER: nvale LOGGED OUT MAIN_DESK\n[03:17:02] USER: amercer LOGGED IN TO VAULT_B3_NODE\n[03:22:45] FILE #842 STATUS: UNLINKED"
+  },
+  {
+    "id": "EV-10",
+    "app": "browser",
+    "title": "ARCHIVE NODE DIRECTORY",
+    "type": "browser",
+    "content": "INTERNAL ARCHIVE DIRECTORY\n\nVAULT B3\nAuthorized role groups:\n- Senior Archival Officer\n- Systems Administrator\n\nNode B3 was not scheduled for maintenance during the night of the incident."
+  },
+  {
+    "id": "EV-11",
+    "app": "browser",
+    "title": "ARCHIVE TRAINING // HEX & ASCII",
+    "type": "browser",
+    "content": "ARCHIVE TRAINING\n\nDATA INTERPRETATION // MODULE 01\n\nSome recovered data is stored as hexadecimal bytes rather than readable text.\nBefore interpreting corrupted archive material, learn how hexadecimal values can represent ASCII characters.\n\nTRAINING VIDEO:\nHEX to ASCII\nhttps://www.youtube.com/watch?v=mQC0heJ5XrM\n\nTRAINING NOTE #01\nTwo hexadecimal symbols can represent one byte.\nDo not assume that a sequence of numbers is meaningless.\n\nOBJECTIVE:\nLearn the conversion method, then return to the corrupted archive file."
+  }
+]

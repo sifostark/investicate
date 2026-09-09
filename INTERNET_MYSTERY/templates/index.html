@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTERNET MYSTERY</title>
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/intro.css">
+    <link rel="stylesheet" href="/static/css/boot.css">
+    <link rel="stylesheet" href="/static/css/desktop.css">
+    <link rel="stylesheet" href="/static/css/windows.css">
+    <link rel="stylesheet" href="/static/apps/cases/case001/case001.css">
+</head>
+<body>
+<div class="crt-overlay"></div>
+<div class="scanline"></div>
+
+<div id="intro-screen" class="screen active">
+    <div class="intro-scroll-hint" aria-hidden="true">SCROLL</div>
+    <div class="intro-camera-rail" aria-hidden="true">
+            <div class="camera-rail-line"></div>
+            <div class="camera-rail-track">
+                <div class="camera-rail-thumb" id="intro-camera-thumb"></div>
+            </div>
+            <div class="camera-rail-mark mark-1">01</div>
+            <div class="camera-rail-mark mark-2">02</div>
+            <div class="camera-rail-mark mark-3">03</div>
+            <div class="camera-rail-mark mark-4">04</div>
+            <div class="camera-rail-label">CAM // MOVE</div>
+        </div>
+
+        <div class="intro-camera-viewport" id="intro-camera-viewport">
+        <div class="intro-container">
+        <div class="brand-logo">
+            <svg class="im-logo" viewBox="0 0 100 100" width="80" height="80">
+                <rect x="10" y="10" width="80" height="80" fill="none" stroke="#a0a0a0" stroke-width="4"/>
+                <path d="M 30 30 L 30 70 M 30 30 L 50 50 L 70 30 M 70 30 L 70 70"
+                      fill="none" stroke="#d0d0d0" stroke-width="5"
+                      stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="50" cy="50" r="3" fill="#8b0000"/>
+            </svg>
+        </div>
+        <h1 class="main-title">INTERNET MYSTERY</h1>
+        <h2 class="sub-title">AN INVESTIGATION ENVIRONMENT</h2>
+
+        <div class="text-block visible" id="intro-p1">
+            <p>You are about to enter a collection of investigations designed to challenge how you think.</p>
+            <p class="highlight-text">Not your intelligence.</p>
+            <p>Your attention. Your reasoning. Your curiosity.</p>
+        </div>
+
+        <div class="text-block" id="intro-p2">
+            <p>Some answers will be obvious.</p>
+            <p>Some will be hidden.</p>
+            <p>Some will be misleading.</p>
+            <p class="accent-text">And some... will require you to look somewhere you never thought to look.</p>
+        </div>
+
+        <div class="warning-box" id="intro-warning">
+            <div class="warning-title">? WARNING</div>
+            <p>DO NOT ASSUME. DO NOT RUSH. DO NOT TRUST EVERYTHING YOU SEE.</p>
+            <p class="bold-warning">EVERYTHING MAY MATTER.</p>
+        </div>
+
+        <div class="action-area" id="intro-action">
+            <button id="btn-begin" class="retro-button">BEGIN</button>
+            <span class="sub-action-text">ENTER AT YOUR OWN CURIOSITY</span>
+        </div>
+        </div>
+    </div>
+</div>
+
+<div id="boot-screen" class="screen">
+    <div class="boot-container">
+        <div id="boot-log" class="console-text"></div>
+        <div class="boot-cursor">_</div>
+    </div>
+</div>
+
+<div id="desktop-screen" class="screen">
+    <div class="desktop-wallpaper"></div>
+
+    <div id="desktop-status" class="desktop-status">SYSTEM // MAIN ENVIRONMENT</div>
+
+    <div id="desktop-icons" class="desktop-grid">
+        <div class="desktop-icon" data-app="cases">
+            <div class="icon-svg">📁</div><span class="icon-label">CASES</span>
+        </div>
+        <div class="desktop-icon" data-app="terminal">
+            <div class="icon-svg">💻</div><span class="icon-label">TERMINAL</span>
+        </div>
+        <div class="desktop-icon" data-app="documents">
+            <div class="icon-svg">📂</div><span class="icon-label">DOCUMENTS</span>
+        </div>
+        <div class="desktop-icon" data-app="photos">
+            <div class="icon-svg">🖼️</div><span class="icon-label">PHOTOS</span>
+        </div>
+        <div class="desktop-icon" data-app="audio">
+            <div class="icon-svg">🎧</div><span class="icon-label">AUDIO</span>
+        </div>
+        <div class="desktop-icon" data-app="browser">
+            <div class="icon-svg">🌐</div><span class="icon-label">BROWSER</span>
+        </div>
+        <div class="desktop-icon" data-app="messages">
+            <div class="icon-svg">💬</div><span class="icon-label">MESSAGES</span>
+        </div>
+        <div class="desktop-icon" data-app="notes">
+            <div class="icon-svg">📝</div><span class="icon-label">NOTES</span>
+        </div>
+        <div class="desktop-icon" data-app="trash">
+            <div class="icon-svg">🗑️</div><span class="icon-label">TRASH</span>
+        </div>
+    </div>
+
+    <div id="windows-container"></div>
+
+    <div id="taskbar">
+        <div id="start-menu-btn" class="taskbar-btn"><span>SYSTEM</span></div>
+        <div id="taskbar-apps" class="taskbar-apps-container"></div>
+        <div id="background-audio-control" class="audio-control">
+            <span class="audio-label">BGM</span>
+            <input id="background-volume" type="range" min="0" max="100" value="35" title="Background volume">
+            <button id="background-mute" class="audio-mute">MUTE</button>
+        </div>
+        <div id="system-tray">
+            <div id="system-clock" class="tray-item">00:00</div>
+        </div>
+    </div>
+</div>
+
+<script src="/static/js/audio.js"></script>
+<script src="/static/js/storage.js"></script>
+<script src="/static/js/windows.js"></script>
+<script src="/static/js/intro.js"></script>
+<script src="/static/js/boot.js"></script>
+<script src="/static/js/desktop.js"></script>
+<script src="/static/apps/cases/case001/case001.js"></script>
+<script src="/static/js/main.js"></script>
+</body>
+</html>

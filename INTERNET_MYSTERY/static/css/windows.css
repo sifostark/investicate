@@ -1,0 +1,59 @@
+.window {
+    position: absolute;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    background: #111;
+    border: 1px solid #666;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.55);
+    min-width: 280px;
+    min-height: 180px;
+}
+
+.window.focused {
+    border-color: #aaa;
+}
+
+.window-header {
+    height: 32px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #1b1b1b;
+    border-bottom: 1px solid #444;
+    cursor: move;
+}
+
+.window-title {
+    padding-left: 10px;
+    font-size: 11px;
+    color: #ccc;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.window-controls {
+    display: flex;
+    height: 100%;
+}
+
+.win-btn {
+    width: 34px;
+    height: 100%;
+    border: 0;
+    border-left: 1px solid #333;
+    background: #151515;
+    color: #bbb;
+    cursor: pointer;
+}
+
+.win-btn:hover {
+    background: #252525;
+}
+
+.window-body {
+    flex: 1;
+    overflow: auto;
+    min-height: 0;
+}

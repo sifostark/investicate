@@ -1,0 +1,17 @@
+/* CASE 001 VISUAL OVERRIDES */
+
+.case001-wallpaper:after {
+    content: "CASE 001";
+    position: absolute;
+    right: 30px;
+    bottom: 55px;
+    color: rgba(255,255,255,0.025);
+    font-size: 70px;
+    letter-spacing: 8px;
+}
+
+/* HEX TRAINING */
+.hex-training-note {
+    letter-spacing: 1px;
+    line-height: 1.8;
+}

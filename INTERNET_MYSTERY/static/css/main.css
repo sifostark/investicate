@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #080808;
+    color: #d0d0d0;
+    font-family: "Courier New", monospace;
+}
+
+button, input, textarea {
+    font-family: inherit;
+}
+
+.crt-overlay {
+    position: fixed;
+    z-index: 9999;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.015);
+}
+
+.scanline {
+    position: fixed;
+    z-index: 10000;
+    pointer-events: none;
+    width: 100%;
+    height: 2px;
+    background: rgba(255,255,255,0.035);
+    animation: scan 7s linear infinite;
+}
+
+@keyframes scan {
+    from { top: 0; }
+    to { top: 100%; }
+}
+
+.screen {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.screen.active {
+    display: block;
+}
+
+.empty-state,
+.error-state,
+.success-state {
+    padding: 30px;
+    text-align: center;
+    border: 1px solid #444;
+    margin: 10px;
+}
+
+.error-state {
+    color: #d88;
+}
+
+.success-state {
+    color: #ddd;
+    border-color: #777;
+}
+
+.muted {
+    color: #777;
+    font-size: 12px;
+}
+
+pre {
+    white-space: pre-wrap;
+    word-break: break-word;
+}

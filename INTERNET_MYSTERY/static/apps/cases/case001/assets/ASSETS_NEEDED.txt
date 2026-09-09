@@ -1,0 +1,34 @@
+CASE 001 ASSETS TO ADD
+========================
+
+1) office_0317.jpg
+Place in:
+static/apps/cases/case001/assets/images/office_0317.jpg
+
+Recommended image:
+- retro/noir 1990s archive office
+- surveillance-camera / flash-photo feel
+- analog wall clock clearly reads 03:17
+- desk, papers, old computer, empty coffee mug
+- no real person / no celebrity
+
+2) basement_blueprint.jpg
+Place in:
+static/apps/cases/case001/assets/images/basement_blueprint.jpg
+
+Recommended image:
+- technical basement blueprint
+- labels: BASEMENT B2, MAINTENANCE AREA, VAULT B3
+- dark blue / white technical drawing
+- realistic document texture
+
+3) REC_14-10-18_03.wav
+Place in:
+static/apps/cases/case001/assets/audio/REC_14-10-18_03.wav
+
+Recommended recording:
+- spoken by a fictional character, Alex
+- not a confession
+- room ambience + paper sounds + distant door + footsteps
+- subtle Morse signal in background spelling ARCHIVE
+- keep the signal discoverable but not obvious

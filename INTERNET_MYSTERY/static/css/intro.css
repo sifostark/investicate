@@ -1,0 +1,170 @@
+#intro-screen {
+    background:
+        radial-gradient(circle at center, #181818 0, #080808 65%, #030303 100%);
+}
+
+.intro-container {
+    width: 700px;
+    max-width: 90%;
+    margin: 0 auto;
+    padding-top: 8vh;
+    text-align: center;
+}
+
+.brand-logo {
+    margin-bottom: 18px;
+}
+
+.main-title {
+    letter-spacing: 8px;
+    font-size: 38px;
+    margin: 10px 0;
+    color: #ddd;
+}
+
+.sub-title {
+    font-size: 13px;
+    letter-spacing: 4px;
+    color: #777;
+    margin-bottom: 45px;
+}
+
+.text-block,
+.warning-box,
+.action-area {
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.text-block.visible,
+.warning-box.visible,
+.action-area.visible {
+    opacity: 1;
+}
+
+.text-block {
+    margin: 25px 0;
+    line-height: 1.7;
+}
+
+.highlight-text {
+    color: #eee;
+    font-weight: bold;
+}
+
+.accent-text {
+    color: #aaa;
+}
+
+.warning-box {
+    border: 1px solid #555;
+    padding: 15px;
+    margin: 35px auto;
+    max-width: 620px;
+}
+
+.warning-title {
+    margin-bottom: 8px;
+    color: #aaa;
+}
+
+.bold-warning {
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.retro-button,
+.retro-small {
+    background: #111;
+    color: #ddd;
+    border: 1px solid #777;
+    padding: 10px 22px;
+    cursor: pointer;
+}
+
+.retro-button:hover,
+.retro-small:hover {
+    background: #222;
+}
+
+.sub-action-text {
+    display: block;
+    margin-top: 12px;
+    font-size: 10px;
+    color: #555;
+}
+
+/* INTRO CAMERA / SCROLL RAIL - additive only */
+#intro-screen{overflow:hidden;position:relative}
+.intro-camera-viewport{position:relative;width:100%;height:100%;overflow:hidden}
+.intro-container{position:relative;z-index:2;transition:transform 1.15s cubic-bezier(.2,.8,.2,1)}
+
+.intro-camera-rail{position:absolute;z-index:8;left:26px;top:50%;width:74px;height:310px;transform:translateY(-50%);pointer-events:none;color:#666}
+.camera-rail-line{position:absolute;left:37px;top:8px;width:1px;height:294px;background:linear-gradient(to bottom,transparent,#555 12%,#777 50%,#555 88%,transparent)}
+.camera-rail-track{position:absolute;left:27px;top:16px;width:21px;height:276px;border:1px solid #444;background:rgba(0,0,0,.25)}
+.camera-rail-thumb{position:absolute;left:-5px;top:0;width:29px;height:42px;border:1px solid #aaa;background:#101010;box-shadow:0 0 10px rgba(255,255,255,.08);transition:top 1.05s cubic-bezier(.2,.8,.2,1)}
+.camera-rail-thumb:before,.camera-rail-thumb:after{content:"";position:absolute;left:6px;right:6px;height:1px;background:#777}
+.camera-rail-thumb:before{top:12px}.camera-rail-thumb:after{top:27px}
+.camera-rail-thumb{clip-path:polygon(0 0,100% 0,100% 100%,0 100%)}
+.camera-rail-mark{position:absolute;left:54px;font-size:8px;letter-spacing:1px;color:#555;transition:color .5s ease}
+.mark-1{top:14px}.mark-2{top:91px}.mark-3{top:168px}.mark-4{top:245px}
+.camera-rail-label{position:absolute;left:-5px;top:310px;width:84px;font-size:7px;letter-spacing:1px;transform:rotate(-90deg);transform-origin:left top;color:#444}
+
+/* Subtle camera-like movement: the original typography/content is untouched. */
+#intro-screen.camera-stage-1 .intro-container{transform:translateY(0)}
+#intro-screen.camera-stage-2 .intro-container{transform:translateY(-18px)}
+#intro-screen.camera-stage-3 .intro-container{transform:translateY(-34px)}
+#intro-screen.camera-stage-4 .intro-container{transform:translateY(-52px)}
+#intro-screen.camera-stage-2 .mark-2,
+#intro-screen.camera-stage-3 .mark-2,
+#intro-screen.camera-stage-3 .mark-3,
+#intro-screen.camera-stage-4 .mark-2,
+#intro-screen.camera-stage-4 .mark-3,
+#intro-screen.camera-stage-4 .mark-4{color:#aaa}
+
+@media(max-width:760px){
+    .intro-camera-rail{left:7px;transform:translateY(-50%) scale(.82);transform-origin:left center}
+    .intro-container{max-width:82%;margin-left:auto;margin-right:auto}
+}
+
+
+/* FIX: allow the intro to scroll so BEGIN is reachable on short screens */
+#intro-screen {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#intro-screen .intro-camera-viewport {
+    min-height: 100vh;
+    height: auto;
+    overflow: visible;
+    padding: 3vh 0 12vh 0;
+    box-sizing: border-box;
+}
+
+#intro-screen .intro-container {
+    padding-top: 3vh;
+    padding-bottom: 8vh;
+}
+
+#intro-screen #intro-action {
+    margin-bottom: 5vh;
+}
+
+@media (max-height: 700px) {
+    #intro-screen .intro-container { padding-top: 1vh; }
+    #intro-screen .sub-title { margin-bottom: 24px; }
+    #intro-screen .text-block { margin: 16px 0; }
+    #intro-screen .warning-box { margin: 20px auto; }
+}
+
+.intro-scroll-hint {
+    position: fixed;
+    right: 14px;
+    bottom: 14px;
+    z-index: 20;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: #555;
+    pointer-events: none;
+}

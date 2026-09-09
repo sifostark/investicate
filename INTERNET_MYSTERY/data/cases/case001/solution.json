@@ -1,0 +1,6 @@
+{
+  "culprit": "Alex Mercer",
+  "required_evidence": ["EV-01", "EV-03", "EV-09"],
+  "key_evidence": "EV-09",
+  "summary": "Alex Mercer claimed to have left at 02:40, but the hidden network record shows his account entering Vault B3 at 03:17:02. The Hex artifact reveals how to find that hidden record. Other evidence helps rule out the alternative suspects."
+}

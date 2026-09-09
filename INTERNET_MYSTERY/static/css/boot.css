@@ -1,0 +1,28 @@
+#boot-screen {
+    background: #050505;
+    color: #bdbdbd;
+}
+
+.boot-container {
+    padding: 50px;
+    max-width: 900px;
+}
+
+.console-text {
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.boot-line:before {
+    content: "[SYS] ";
+    color: #666;
+}
+
+.boot-cursor {
+    margin-top: 10px;
+    animation: blink 0.8s steps(1) infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}

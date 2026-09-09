@@ -1,0 +1,20 @@
+[
+  {
+    "id": "c1",
+    "name": "Alex Mercer",
+    "role": "Senior Archival Officer",
+    "notes": "Authorized to access archival records and Vault Node B3."
+  },
+  {
+    "id": "c2",
+    "name": "Nora Vale",
+    "role": "Systems Auditor",
+    "notes": "High system privileges, normally works from the main desk."
+  },
+  {
+    "id": "c3",
+    "name": "Daniel Cross",
+    "role": "Night Maintenance",
+    "notes": "Works in the basement maintenance area and can access B2."
+  }
+]

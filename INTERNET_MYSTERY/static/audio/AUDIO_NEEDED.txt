@@ -1,0 +1,26 @@
+INTERNET MYSTERY // AUDIO
+
+Put your three audio files in this folder:
+
+1. ui-click.mp3
+   Played when the player clicks a desktop application.
+
+2. intro-begin.mp3
+   Played when BEGIN is clicked, during the boot / analyzing sequence.
+
+3. background.mp3
+   Background music. It starts automatically when the Desktop appears.
+
+IMPORTANT:
+- Use MP3 files with exactly these names.
+- If your files are WAV, either convert them to MP3 or change the filenames/paths
+  in static/js/audio.js.
+- No audio file is included here; add your own three files.
+
+BACKGROUND VOLUME:
+The Desktop has a small volume control in the taskbar.
+The player can:
+- drag the slider to lower/raise background music
+- click MUTE to silence/unmute the background music
+
+The setting is saved locally in the browser.

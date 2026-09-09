@@ -1,0 +1,23 @@
+{
+  "id": "case001",
+  "desktop_title": "CASE 001 // INVESTIGATION ENVIRONMENT",
+  "wallpaper_class": "case001-wallpaper",
+  "apps": {
+    "documents": true,
+    "photos": true,
+    "audio": true,
+    "messages": true,
+    "browser": true,
+    "terminal": true,
+    "notes": true,
+    "trash": true
+  },
+  "mount_message": [
+    "CASE 001 DETECTED.",
+    "MOUNTING EVIDENCE VOLUME...",
+    "RESTORING ARCHIVE MATERIAL...",
+    "LOADING COMMUNICATIONS...",
+    "LOADING MEDIA...",
+    "CASE ENVIRONMENT READY."
+  ]
+}
